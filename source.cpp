@@ -7,8 +7,9 @@ int main() {
 	newList->addFirst(5);
 	newList->addFirst(10);
 	newList->addFirst(15);
-
-	cout << newList->_head->_next->_info << endl;
+	newList->displayList();
+	newList->removeLast();
+	newList->displayList();
 
 	getchar();
 	return 0;
