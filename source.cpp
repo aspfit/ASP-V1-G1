@@ -7,7 +7,6 @@ int main() {
 	newList.addFirst(5);
 	newList.addFirst(10);
 	newList.addFirst(15);
-	newList.print();
 
 	getchar();
 	return 0;
