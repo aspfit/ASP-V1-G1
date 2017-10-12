@@ -21,8 +21,8 @@ void LinkedList<T>::removeLast() {
 	Node<T> *temp = this->_head;
 	Node<T> *previousTemp = nullptr;
 	while (temp->_next != nullptr) {
-		previousTemp = tmp;
-		temp = temp->Next;
+		previousTemp = temp;
+		temp = temp->_next;
 	}
 	
 	previousTemp->_next = nullptr;
