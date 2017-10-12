@@ -4,13 +4,13 @@
 template <class T>
 struct LinkedList {
 public:
-	Node *_head;
+	Node<T> *_head;
 
 	void addFirst(T info);
 };
 
 template<class T>
 void LinkedList<T>::addFirst(T info) {
-	auto *newNode = new Node(info, _head);
+	auto *newNode = new Node<T>(info, _head);
 	_head = newNode;
 }
