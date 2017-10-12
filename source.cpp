@@ -1,25 +1,6 @@
 #include <iostream>
+#include "LinkedList.h"
 using namespace std;
-
-typedef int T;
-struct Node {
-	T _info;
-	Node *_next;
-
-	Node(T info, Node * next = nullptr) {
-		_info = info;
-		_next = next;
-	}
-};
-
-struct LinkedList {
-	Node *_head;
-
-	void addFirst(T info) {
-		auto *newNode = new Node(info, _head);
-		_head = newNode;
-	}
-};
 
 int main() {
 	Node *first = new Node(10);
@@ -27,7 +8,11 @@ int main() {
 	cout << first->_info << endl; //10
 	cout << second->_next->_info << endl; //10
 
-	
+	LinkedList newList;
+	newList.addFirst(5);
+	newList.addFirst(10);
+	newList.addFirst(15);
+
 	getchar();
 	return 0;
 }
