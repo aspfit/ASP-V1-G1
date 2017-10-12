@@ -11,10 +11,8 @@ int main() {
 	newList->addFirst(25);
 	newList->displayList();
 	cout << endl;
-	newList->removeLast();
-	newList->displayList();
-	cout << endl;
-	newList->removeFirst();
+
+	newList->removeInfo(30);
 	newList->displayList();
 
 	getchar();
