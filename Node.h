@@ -1,6 +1,6 @@
 #pragma once
 
-typedef int T;
+template <class T>
 struct Node {
 	T _info;
 	Node *_next;
