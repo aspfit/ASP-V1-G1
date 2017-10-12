@@ -1,5 +1,7 @@
 #pragma once
+#include <iostream>
 #include "Node.h";
+using namespace std;
 
 struct LinkedList {
 	Node *_head;
