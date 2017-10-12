@@ -3,11 +3,10 @@
 using namespace std;
 
 int main() {
-	LinkedList newList;
-	newList.addFirst(5);
-	newList.addFirst(10);
-	newList.addFirst(15);
-	newList.print();
+	auto *newList = new LinkedList<int>();
+	newList->addFirst(5);
+	newList->addFirst(10);
+	newList->addFirst(15);
 
 	getchar();
 	return 0;
