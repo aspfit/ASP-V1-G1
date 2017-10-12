@@ -11,6 +11,7 @@ public:
 	void removeLast();
 	void displayList();
 	void removeFirst();
+	void removeInfo(T toRemove);
 };
 
 template<class T>
@@ -48,3 +49,20 @@ void LinkedList<T>::removeFirst() {
 	delete temp;
 }
 
+template<class T>
+void LinkedList<T>::removeInfo(T toRemove) {
+	if (_head->_info == toRemove) {
+		removeFirst();
+		return;
+	}
+
+	Node<T> *temp = this->_head;
+	Node<T> *previousTemp = nullptr;
+	while (temp->_info != toRemove) {
+		previousTemp = temp;
+		temp = temp->_next;
+	}
+
+	previousTemp->_next = temp->_next;
+	delete temp;
+}
