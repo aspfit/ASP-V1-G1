@@ -32,8 +32,7 @@ void LinkedList<T>::removeLast() {
 }
 
 template<class T>
-inline void LinkedList<T>::displayList()
-{
+inline void LinkedList<T>::displayList() {
 	Node<T> *temp = this->_head;
 	while (temp != nullptr) {
 		std::cout << temp->_info << std::endl;
