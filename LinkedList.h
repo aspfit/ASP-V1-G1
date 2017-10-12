@@ -36,7 +36,7 @@ inline void LinkedList<T>::displayList()
 {
 	Node<T> *temp = this->_head;
 	while (temp != nullptr) {
-		std::cout << temp->_info << endl;
+		std::cout << temp->_info << std::endl;
 		temp = temp->_next;
 	}
 }
