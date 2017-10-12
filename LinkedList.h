@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include "Node.h";
 
 template <class T>
@@ -8,6 +9,7 @@ public:
 
 	void addFirst(T info);
 	void removeLast();
+	void displayList();
 };
 
 template<class T>
@@ -27,5 +29,15 @@ void LinkedList<T>::removeLast() {
 	
 	previousTemp->_next = nullptr;
 	delete temp;
+}
+
+template<class T>
+inline void LinkedList<T>::displayList()
+{
+	Node<T> *temp = this->_head;
+	while (temp != nullptr) {
+		std::cout << temp->_info << endl;
+		temp = temp->_next;
+	}
 }
 
