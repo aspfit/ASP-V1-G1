@@ -10,6 +10,7 @@ public:
 	void addFirst(T info);
 	void removeLast();
 	void displayList();
+	void removeFirst();
 };
 
 template<class T>
@@ -32,11 +33,18 @@ void LinkedList<T>::removeLast() {
 }
 
 template<class T>
-inline void LinkedList<T>::displayList() {
+void LinkedList<T>::displayList() {
 	Node<T> *temp = this->_head;
 	while (temp != nullptr) {
 		std::cout << temp->_info << std::endl;
 		temp = temp->_next;
 	}
+}
+
+template<class T>
+void LinkedList<T>::removeFirst() {
+	Node<T> *temp = this->_head;
+	this->_head = this->_head->_next;
+	delete temp;
 }
 
